@@ -264,7 +264,7 @@
           </address>
         </div>
         <div class="footer-social-container">
-          <p class="footer-sections-header">присоединяйтесь</p>
+          <p class="footer-social-header">присоединяйтесь</p>
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="footer-social-link" href="">
@@ -299,15 +299,24 @@
             </li>
           </ul>
         </div>
-        <form>
-          <p class="footer-sections-header">Подпишитесь на рассылку</p>
-          <input class="subscribe-input" type="email" placeholder="E-mail" />
-          <button class="subscribe-button" type="submit">
-            Подписаться
-            <svg class="telegram-icon" width="24" height="24">
-              <use href="./images/icons.svg#telegram"></use>
-            </svg>
-          </button>
+        <form action="#" name="footer-form">
+          <label class="subscribe-header" for="footer-input">Подпишитесь на рассылку</label>
+          <div class="subscribe-wrapper">
+            <input
+              id="footer-input"
+              class="subscribe-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              autocomplete="off"
+            />
+            <button class="subscribe-button" type="submit">
+              Подписаться
+              <svg class="telegram-icon" width="24" height="24">
+                <use href="./images/icons.svg#telegram"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </footer>
