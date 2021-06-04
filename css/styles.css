@@ -214,14 +214,15 @@ body {
   cursor: pointer;
   letter-spacing: 0.06em;
   background-color: var(--primary-accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .button:hover,
 .button:focus {
   background-color: var(--hero-button-hover-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* ========================= Конец Героя ========================= */
 /* ========================= Особенности ========================= */
@@ -626,15 +627,14 @@ body {
   padding: 0 0 0 16px;
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: var(--primary-background-color);
   background-color: var(--footer-backgroung-color);
   outline: none;
-  transition: border-color var(--transition-duration) var(--transition-timing-function);
+  transition: filter var(--transition-duration) var(--transition-timing-function);
 }
 .subscribe-input:focus {
-  border-color: var(--primary-accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .subscribe-input::placeholder {
   letter-spacing: 0.03em;
@@ -652,15 +652,16 @@ body {
   letter-spacing: 0.06em;
   color: var(--primary-background-color);
   background-color: var(--primary-accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .subscribe-button:hover,
 .subscribe-button:focus {
   background-color: var(--hero-button-hover-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .telegram-icon {
   position: absolute;
@@ -833,15 +834,16 @@ body {
   letter-spacing: 0.06em;
   color: var(--primary-background-color);
   background-color: var(--primary-accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .modal-button:hover,
 .modal-button:focus {
   background-color: var(--hero-button-hover-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ========================= Конец Модального окна ========================= */
