@@ -630,7 +630,6 @@ body {
   border-radius: 4px;
   color: var(--primary-background-color);
   background-color: var(--footer-backgroung-color);
-  outline: none;
   transition: filter var(--transition-duration) var(--transition-timing-function);
 }
 .subscribe-input:focus {
@@ -726,7 +725,15 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.modal-wrapper {
+  margin-bottom: 10px;
+}
+.modal-feedback-wrapper {
+  margin-bottom: 20px;
+}
 .modal-label {
+  display: block;
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -750,7 +757,6 @@ body {
 .modal-input-wrapper {
   position: relative;
   display: block;
-  margin: 4px 0 6px 0;
 }
 .modal-input-icon {
   position: absolute;
@@ -760,7 +766,7 @@ body {
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .modal-feedback {
-  margin: 4px 0 20px 0;
+  display: block;
   padding: 12px 16px;
   width: 100%;
   height: 120px;
@@ -779,28 +785,32 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.empty-box {
+/* .empty-box {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-}
-.icon-check {
+} */
+/* .icon-check {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   opacity: 0;
   visibility: 0;
-}
-.modal-form-checkbox:checked + .policy-label > .icon-check {
+} */
+/* .modal-form-checkbox:focus + .policy-label > .empty-box,
+.modal-form-checkbox:focus + .policy-label > .icon-check {
+  outline: 1.5px solid black;
+} */
+/* .modal-form-checkbox:checked + .policy-label > .icon-check {
   opacity: 1;
   visibility: 1;
 }
 .modal-form-checkbox:checked + .policy-label > .empty-box {
   opacity: 0;
   visibility: 0;
-}
+} */
 .policy {
   position: relative;
   display: flex;
@@ -813,10 +823,32 @@ body {
   color: var(--secondary-text-color);
 }
 .policy-label {
+  display: flex;
+  align-items: center;
+
   -moz-user-select: none; /* Mozilla Firefox */
   -ms-user-select: none; /* Internet Explorer (не поддерживается) */
   -o-user-select: none; /* Opera Presto (не поддерживается) */
   -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
+}
+.policy-label::before {
+  content: '';
+  display: inline-block;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+}
+.modal-form-checkbox:checked + .policy-label::before {
+  background-color: var(--primary-accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--primary-accent-color);
+}
+.modal-form-checkbox:focus + .policy-label::before {
+  outline: 2px solid #000000;
 }
 .policy-link {
   color: var(--primary-accent-color);
