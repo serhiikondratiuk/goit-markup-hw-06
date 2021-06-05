@@ -198,6 +198,11 @@ body {
     url(../images/herobgi.jpg);
   background-size: cover;
 }
+.hero-wrapper {
+  display: block;
+  width: 696px;
+  margin: 0 auto;
+}
 .hero-title {
   margin-bottom: 30px;
   font-weight: 900;
@@ -631,6 +636,7 @@ body {
   color: var(--primary-background-color);
   background-color: var(--footer-backgroung-color);
   transition: filter var(--transition-duration) var(--transition-timing-function);
+  cursor: pointer;
 }
 .subscribe-input:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -685,7 +691,7 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .modal {
   position: absolute;
@@ -747,6 +753,7 @@ body {
   border-radius: 4px;
   outline: none;
   transition: border-color var(--transition-duration) var(--transition-timing-function);
+  cursor: pointer;
 }
 .modal-form-input:focus {
   border-color: var(--primary-accent-color);
@@ -775,6 +782,7 @@ body {
   resize: none;
   outline: none;
   transition: border-color var(--transition-duration) var(--transition-timing-function);
+  cursor: pointer;
 }
 .modal-feedback:focus {
   border-color: var(--primary-accent-color);
@@ -785,6 +793,7 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+
 /* .empty-box {
   position: absolute;
   top: 50%;
@@ -811,6 +820,7 @@ body {
   opacity: 0;
   visibility: 0;
 } */
+
 .policy {
   position: relative;
   display: flex;
@@ -839,6 +849,7 @@ body {
   height: 15px;
   border: 2px solid #000000;
   border-radius: 2px;
+  cursor: pointer;
 }
 .modal-form-checkbox:checked + .policy-label::before {
   background-color: var(--primary-accent-color);
