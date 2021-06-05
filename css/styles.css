@@ -848,7 +848,7 @@ body {
   border-color: var(--primary-accent-color);
 }
 .modal-form-checkbox:focus + .policy-label::before {
-  outline: 2px solid #000000;
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.75);
 }
 .policy-link {
   color: var(--primary-accent-color);
